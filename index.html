@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" 
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer">
+    </script>
+  </head>
+
+  <body>
+    <div id="ContentsWrapper" style="display: flex; flex-direction: row; justify-content: center; align-items: center; position: relative;">
+      <div id="LottieWrapper" style="width:720px;height:1600px;" class="lottie" >
+        
+      </div>
+      <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: bold; cursor: default;" onclick="rerun();">
+        텍스트 터치시 json 작동
+      </p>
+    </div>
+
+
+    <!-- <canvas id="LottieCanvas"></canvas> -->
+
+    <script>
+      const element = document.getElementById("LottieWrapper");
+      // const canvasElement = document.getElementById("LottieCanvas");
+      const rerun = () => {
+        window.mainLottie.play()
+        // element.innerHTML = "";
+        console.log()
+        // lottie.loadAnimation({
+        //   container: element, // the dom element that will contain the animation
+        //   renderer: 'canvas',
+        //   path: '240116test.json' // the path to the animation json
+        // });
+      }
+      window.mainLottie = lottie.loadAnimation({
+        container: element, // the dom element that will contain the animation
+        renderer: 'canvas',
+        autoplay: false,
+        path: '240116test.json' // the path to the animation json
+      });
+
+      
+      // lottie.loadAnimation({
+      //   container: canvasElement, // the dom element that will contain the animation
+      //   renderer: 'canvas',
+      //   loop: true,
+      //   autoplay: true,
+      //   path: 'test0116.json' // the path to the animation json
+      // });
+      // console.log(lottie)
+    </script>
+  </body>
+</html>
